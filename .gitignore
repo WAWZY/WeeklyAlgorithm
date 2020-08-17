@@ -1,4 +1,9 @@
 #
 .vscode/
+.vscode/*
+
+executable*
+
+*.class
 .DS_Store
 
