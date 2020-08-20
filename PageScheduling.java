@@ -33,6 +33,7 @@ public class PageScheduling {
         public PageManager(int cacheMaxSize) {
             this.cacheMaxSize = cacheMaxSize;
             this.pages = new LinkedHashSet<>();
+            this.count = pages.size();
         }
 
         public boolean isFull() {
@@ -43,16 +44,15 @@ public class PageScheduling {
 
             if (!pages.contains(pageNum)) {
                 // pages do not include specifc pageNum
-                output++;
-
                 if (this.isFull()) {
                     // remove first one
+                    // will add one soon and don't change the count
                     this.pages.remove(this.pages.iterator().next());
-                    // add one and don't change the count
-
-                } else {
-                    pages.add(pageNum);
                 }
+                pages.add(pageNum);
+                this.output ++;
+                this.count ++;
+                
             } else {
                 // nothing to do because pages contains pageNum
             }
