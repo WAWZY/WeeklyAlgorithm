@@ -7,3 +7,5 @@ executable*
 *.class
 .DS_Store
 
+# input files
+*.in
