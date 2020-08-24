@@ -4,11 +4,10 @@
 int main()
 {
     int count;
-    char file[] = __FILE__;
-    char *filename = strtok(file, ".");
-    strcat(filename, ".in");
-    FILE *fin = fopen(filename, "rb");
-    fin = stdin;
+    // char file[] = __FILE__;
+    // char *filename = strtok(file, ".");
+    // strcat(filename, ".in");
+    FILE *fin = stdin;
     fscanf(fin, "%d", &count);
 
     for (int kase = 0; kase < count; kase ++)
