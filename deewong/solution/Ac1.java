@@ -1,6 +1,8 @@
+package deewong.solution;
+
 import java.util.Scanner;
 
-public class Game24 {
+public class Ac1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int userInput = scanner.nextInt();

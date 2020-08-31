@@ -1,7 +1,9 @@
+package deewong.solution;
+
 import java.util.LinkedHashSet;
 import java.util.Scanner;
 
-public class PageScheduling {
+public class Ac4 {
 
     public static void main(String[] args) {
 
@@ -11,7 +13,7 @@ public class PageScheduling {
         int n = sc.nextInt(); // Cache Size
         int m = sc.nextInt(); // Page Request Times
 
-        PageManager pageManager = new PageScheduling().new PageManager(n);
+        PageManager pageManager = new Ac4().new PageManager(n);
 
         for (int i = 0; i < m; i++) {
             pageManager.pageIn(sc.nextInt());

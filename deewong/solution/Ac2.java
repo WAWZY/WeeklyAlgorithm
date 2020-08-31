@@ -1,8 +1,10 @@
+package deewong.solution;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class FeiFuZhengShu {
+public class Ac2 {
 
     public static void main(String[] args) {
 
