@@ -7,8 +7,10 @@ executable*
 *.class
 .DS_Store
 
-# input files
+# input & output files
 *.in
+*.out
+test*
 
 # any file or folder name begins with LOCAL... will not include
 LOCAL*
