@@ -9,3 +9,6 @@ executable*
 
 # input files
 *.in
+
+# any file or folder name begins with LOCAL... will not include
+LOCAL*
