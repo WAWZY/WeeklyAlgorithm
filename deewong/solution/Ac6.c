@@ -5,7 +5,7 @@
 #define size 1000000
 
 int n, m;
-int ask, count;
+int ask;
 
 int main()
 {
@@ -16,6 +16,7 @@ int main()
 
     // 读取n m
     scanf("%d%d", &n, &m);
+    int output[n + 1];
     if (n >= 1 && n <= 1e5 && m >= 1 && m <= 1e5)
     {
         int girls[n + 1]; // index represent days
@@ -28,24 +29,29 @@ int main()
             girls[i] = girl_number;
         }
 
-        // 询问m次
-        while (m--)
+        int count = 0;
+        memset(visit, 0, sizeof(visit));
+        for (int i = n; i >= 1; i--)
         {
-            count = 0;
-            memset(visit, 0, sizeof(visit));
-            scanf("%d", &ask);
-            if (ask < 1 || ask > n)
-                continue;
-            for (int i = ask; i <= n; i++)
+            for (int j = i; j <= n; j++)
             {
                 int girl_number = girls[i];
                 if (visit[girl_number] == 0)
                 {
-                    visit[girl_number] = 1;
                     count++;
+                    visit[girl_number] += 1;
                 }
             }
-            printf("%d\n", count);
+            output[i] = count;
+        }
+
+        // 询问m次
+        while (m--)
+        {
+            scanf("%d", &ask);
+            if (ask < 1 || ask > n)
+                continue;
+            printf("%d\n", output[ask]);
         }
     }
 
